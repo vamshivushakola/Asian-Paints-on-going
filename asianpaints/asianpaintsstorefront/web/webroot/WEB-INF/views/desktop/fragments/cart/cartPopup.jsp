@@ -57,12 +57,10 @@
 							${entry.addonsOrderEntry}
 							</div> --%>
 							<div>
-							<c:forEach items="${entry.addonsOrderEntry}" var="addons">
+							<%-- <c:forEach items="${entry.addonsOrderEntry}" var="addons">
 								${addons} |
 							</c:forEach>
-							
-							
-							</div>
+							</div> --%>
 							
 				
 				

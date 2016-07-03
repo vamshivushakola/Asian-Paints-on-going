@@ -67,7 +67,7 @@
 							</c:if>
 						</c:forEach>
 						
-						
+						<b>Selected Add-ons:-</b>
 						<c:forEach items="${entry.addonsOrderEntry}" var="addons">
 						${addons} |
 						</c:forEach>

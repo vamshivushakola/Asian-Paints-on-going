@@ -1,0 +1,74 @@
+# Macros / Replacement Parameter definitions
+$productCatalog=asianpaintsProductCatalog
+$productCatalogName=Asianpaints Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$catalogVersionOnline=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default=$productCatalog:Online]
+$supercategories=source(code, $catalogVersion)[unique=true]
+$supercategoriesonline=source(code, $catalogVersionOnline)[unique=true]
+$categories=target(code, $catalogVersion)[unique=true]
+$categoriesOnline=target(code, $catalogVersionOnline)[unique=true]
+
+$contentCatalog=asianpaintsContentCatalog
+$contentCatalogName=Asianpaints Content Catalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+
+$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$product=product(code, $productCV)
+$category=category(code, $productCV)
+
+#$siteResource=jar:de.hybris.platform.asmtrailstore.constants.AsmtrailstoreConstants&/asmtrailstore/import/sampledata/contentCatalogs/$contentCatalog
+#$productResource=jar:de.hybris.platform.asmtrailstore.constants.AsmtrailstoreConstants&/asmtrailstore/import/sampledata/productCatalogs/$productCatalog
+#$jarResourceCms=jar:de.hybris.platform.asmtrailstore.constants.AsmtrailstoreConstants&/asmtrailstore/import/sampledata/cockpits/cmscockpit
+
+$siteResource=jar:com.asianpaints.initialdata.setup.InitialDataSystemSetup&/asianpaintsinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.asianpaints.initialdata.setup.InitialDataSystemSetup&/asianpaintsinitialdata/import/productCatalogs/$productCatalog
+$jarResourceCms=jar:com.asianpaints.initialdata.setup.InitialDataSystemSetup&/asianpaintsinitialdata/import/sampledata/cockpits/cmscockpit
+
+
+
+# Language
+$lang=en
+
+# Insert Categories
+INSERT_UPDATE Category;code[unique=true];allowedPrincipals(uid)[default='customergroup'];$catalogVersion
+;1500;;
+
+UPDATE Category;$catalogVersion;code[unique=true];name[lang=$lang];description[lang=$lang]
+;;1500;ASM Category;
+
+# Insert Category Structure
+INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
+;1500;1
+
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow']
+;;ASMCategoryLink;ASM Category Link;/Asianpaints-Catalogue/c/1500;ASMCategoryLink;ASMCategoryLink
+
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
+;;ASMCategoryLink;"ASM Products"
+
+# Navigation Bar Component
+#INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;link(uid, $contentCV);styleClass;&componentRef
+#;;ASMBarComponent;ASM Bar Component;10;ASMCategoryLink;;ASMBarComponent
+
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;ASMNavNode;;ASM Category;AsianpaintsNavNode;ASMCategoryLink;ASMNavNode
+
+UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+;;ASMNavNode;"ASM Products"
+
+# Navigation Bar Component
+INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;link(uid, $contentCV);styleClass;navigationNode(&nodeRef);dropDownLayout(code)[default=AUTO];&componentRef
+;;ASMBarComponent;ASM Bar Component;10;ASMCategoryLink;;ASMNavNode;;ASMBarComponent
+
+INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];components(uid, $contentCV)[mode=append]
+;;NavBarComponent;ASMBarComponent
+
+
+
+
+
+
+
+
+
+

@@ -20,7 +20,7 @@
 		
 		<%-- <div class="addonsList"> <c:out value="${selectedAddons}" /> <br></div> --%>
 		</div>
-		
+		Selected Add-ons:-
 		<c:forEach items="${selectedAddons}" var="addons">
 		${addons}
 		<br>

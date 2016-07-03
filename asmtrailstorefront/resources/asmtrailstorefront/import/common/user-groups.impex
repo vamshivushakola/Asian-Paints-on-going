@@ -1,0 +1,7 @@
+$passwordEncoding=md5
+$defaultPassword=123456
+$setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.ConvertPlaintextToEncodedUserPasswordTranslator][default='$passwordEncoding:$defaultPassword']
+INSERT_UPDATE UserGroup;UID[unique=true];groups(uid)[mode=append];locname[lang=en];description
+;customagentgroup;asagentgroup;"Custom Assited Service Customer Support Agen group";"Custom description."
+INSERT_UPDATE Employee;uid[unique=true];$setPassword;name;description;groups(uid)
+;customagent;;"Custom Assisted Service Agent";"Assisted Service Agent";customagentgroup

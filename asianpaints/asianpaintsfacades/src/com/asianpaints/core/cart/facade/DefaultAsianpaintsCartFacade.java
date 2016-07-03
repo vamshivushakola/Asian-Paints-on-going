@@ -35,9 +35,10 @@ public class DefaultAsianpaintsCartFacade extends DefaultCartFacade
 		//parameter.setCartAddons(addons);
 		parameter.setSelectedAddons(addons);
 
-
+		//Now pass parameter to addToCart Method of DefaultCommerceCartService.java and from der DefaultAsianpaintsAddToCartStrategy.java
 		final CommerceCartModification modification = getCommerceCartService().addToCart(parameter);
 
+		//Calling AsianpaintsOrederEntryPopulator via this below converter
 		return getCartModificationConverter().convert(modification);
 	}
 }

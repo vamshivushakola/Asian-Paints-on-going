@@ -102,7 +102,7 @@ public class LoginPageController extends AbstractLoginPageController
 	public String doLogin(@RequestHeader(value = "referer", required = false) final String referer,
 			@RequestParam(value = "error", defaultValue = "false") final boolean loginError, final Model model,
 			final HttpServletRequest request, final HttpServletResponse response, final HttpSession session)
-			throws CMSItemNotFoundException
+					throws CMSItemNotFoundException
 	{
 		if (!loginError)
 		{
@@ -161,19 +161,19 @@ public class LoginPageController extends AbstractLoginPageController
 	public String doRegister(@RequestHeader(value = "referer", required = false) final String referer,
 			final AsianpaintsRegisterForm form, final BindingResult bindingResult, final Model model,
 			final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
-			throws CMSItemNotFoundException
+					throws CMSItemNotFoundException
 	{
 		//getRegistrationValidator().validate(form, bindingResult);
 		asianpaintsRegistrationFormValidator.validate(form, bindingResult);
 
-		//For validator i didn't created setters n getters...i just userd @Resource
+		//For validator i didn't created setters n getters...i just used @Resource
 		//asianpaintsRegistrationFormValidator.validate(form, bindingResult);
 		return processRegisterUserRequest(referer, form, bindingResult, model, request, response, redirectModel);
 	}
 
 	/*
 	 *
-	 * Added Following method
+	 * Added Following method by Vamshi
 	 */
 	protected String processRegisterUserRequest(final String referer, final AsianpaintsRegisterForm form,
 			final BindingResult bindingResult, final Model model, final HttpServletRequest request,

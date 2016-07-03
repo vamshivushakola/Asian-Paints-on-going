@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jun 18, 2016 6:07:30 PM                     ---
+ * --- Generated at Jul 3, 2016 4:44:46 PM                      ---
  * ----------------------------------------------------------------
  */
 package com.asianpaints.facades.constants;

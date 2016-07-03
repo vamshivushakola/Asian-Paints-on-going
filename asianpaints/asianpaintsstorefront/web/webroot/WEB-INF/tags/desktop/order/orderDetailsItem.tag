@@ -48,16 +48,17 @@
 							<c:if test="${not empty option.selected and option.selected.url eq entry.product.url}">
 								<c:forEach items="${option.selected.variantOptionQualifiers}" var="selectedOption">
 									<dl>
-										<dt>${selectedOption.name}:</dt>
-										<dd>${selectedOption.value}</dd>
+										<dt>${selectedOption.name}:
+										${selectedOption.value}</dt>
 									</dl>
 								</c:forEach>
 							</c:if>
 						</c:forEach>
 						
 						<!-- Added for addons -->
+						<b>Selected Add-ons:-</b>
 						<c:forEach items="${entry.addonsOrderEntry}" var="addons">
-							${addons}<br>
+							${addons} |
 						</c:forEach>
 						<!--Ended for addons  -->
 						

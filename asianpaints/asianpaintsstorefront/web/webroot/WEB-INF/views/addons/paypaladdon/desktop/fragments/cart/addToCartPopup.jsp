@@ -59,10 +59,6 @@
 					</c:if>
 				</c:forEach>
 			</c:forEach>
-			
-			<c:forEach items="${entry.addonsOrderEntry}" var="addons">
-								${addons} |
-			</c:forEach>
 		<div class="itemPrice"><format:price priceData="${entry.basePrice}"/></div>
 	</div>
 </div>	

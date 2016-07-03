@@ -118,9 +118,6 @@ INSERT_UPDATE AccountNavigationCollectionComponent;$contentCV[unique=true];uid[u
 INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
 ;;NavBarComponent;Navigation Bar Collection Component;PaintsBarComponent,PaintingAidBarComponent;NavBarComponent
 
-
-
-
 # CMS tabs components
 INSERT_UPDATE CMSTabParagraphComponent;$contentCV[unique=true];uid[unique=true];name;visible;&componentRef
 ;;deliveryTab;Delivery tab;true;deliveryTab

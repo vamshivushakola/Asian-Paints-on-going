@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+
+  
+-->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<itemtypes>
+<!--
+		<itemtype generate="true"
+		   code="MyProduct"
+		   jaloclass="de.hybris.platform.asmtrail.jalo.MyProduct"
+		   extends="Product"
+		   autocreate="true"
+	   >
+			<attributes>
+				<attribute qualifier="myExampleInitialStringField" type="java.lang.String">
+					<description>My Example Initial String Value</description>
+					<modifiers initial="true"/>
+					<persistence type="property"/>
+				</attribute>
+
+				<attribute qualifier="myExampleBooleanField" type="java.lang.Boolean">
+					<description>Example Initial Boolean Field</description>
+               <persistence type="property"/>
+				</attribute>
+
+				<attribute qualifier="media" type="Media">
+					<persistence type="property"/>
+				</attribute>
+
+			</attributes>
+		</itemtype>
+-->
+	
+	<itemtype code="PromotionAssistedServiceRestriction"
+              extends="AbstractPromotionRestriction"
+              jaloclass="de.hybris.platform.assistedservicestorefront.jalo.PromotionAssistedServiceRestriction"
+              autocreate="true"
+              generate="true">
+              
+              <attributes>
+				<attribute qualifier="descriptionPattern" redeclare="true" type="localized:java.lang.String">
+                  <description>The description of the restriction (supports message pattern).</description>
+                  <modifiers read="true" write="true" search="false" optional="true"/>
+                  <persistence type="property">
+                    <columntype>
+                      <value>HYBRIS.LONG_STRING</value>
+                    </columntype>
+                  </persistence>
+                </attribute>
+                
+                <attribute qualifier="positive" type="java.lang.Boolean">
+                  <defaultvalue>Boolean.TRUE</defaultvalue>
+                  <description>Specifies if this restriction is a positive (true) or negative (false) one.</description>
+                  <persistence type="property"/>
+                  <modifiers search="false" optional="false"/>
+                </attribute>              
+              </attributes>
+	</itemtype>
+	</itemtypes>
+</items>

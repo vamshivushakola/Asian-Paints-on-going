@@ -9,6 +9,9 @@
 
 <div id="addonsDiv">
 <table>
+<!--Now getting product data from populator AsianpaintsAddonPopulator by using hey value pair  -->
+
+	<b>Add-ons with ${product.name }-:</b>
 	<c:forEach items="${product.addons}" var="addons">
 			<tr>
 				<td><input type="checkbox" name="addonsCheck" value="${addons}"/></td>

@@ -50,13 +50,21 @@
 	</c:if>
 
 	<!-- Vamshi Added for vouchers-->
-
-	<c:url value="/cart/redeem" var="applyVoucherURl" />
+<table><td>
+	<tr><c:url value="/cart/redeem" var="applyVoucherURl" />
 	<form action="${applyVoucherURl}" method="GET">
 		Voucher Code : <input type="text" class="text" name="voucherNumber" />
-		<input type="submit" value="Apply" /> <b><font color="green">${param.Message}</font></b>
+		<input type="submit" value="Redeem Voucher" /> 
 	</form>
-	<br>
+	</tr>
+	
+	<tr><c:url value="/cart/release" var="releaseVoucherURl" />
+	<form action="${releaseVoucherURl}" method="get">
+		<input type="submit" value="Release Voucher" /><b><font color="green">${param.Message}</font></b>
+	</form>
+	
+	</tr></td></table>
+	
 	<%-- <c:choose>
 		<c:when test="${cartData.appliedVouchers}">
 			<div class="cart_releasegiftcard cart_voucher">

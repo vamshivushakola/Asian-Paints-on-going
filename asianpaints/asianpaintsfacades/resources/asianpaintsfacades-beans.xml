@@ -39,16 +39,9 @@
 		<property name="dateOfBirth" type="java.util.Date" />
 	</bean>
 	
-	<!-- <bean class="de.hybris.platform.commerceservices.service.data.CommerceCartParameter">
-		<property name="cartAddons" type="java.util.List&lt;String>">
-			<description>The CartAddonsModel</description>
-		</property>
-	</bean> -->
-	
-	
 	<bean class="de.hybris.platform.commerceservices.service.data.CommerceCartParameter">
 		<property name="selectedAddons" type="java.util.List&lt;String>">
-			<description>The Selected Addons Model</description>
+			<description>The Selected Add-ons Model</description>
 		</property>
 	</bean>
 	
@@ -56,9 +49,9 @@
 		<property name="addonsOrderEntry" type="java.util.List&lt;String>"/></bean>
 		
 		
-<bean class="de.hybris.platform.commerceservices.order.CommerceCartModification">
+	<bean class="de.hybris.platform.commerceservices.order.CommerceCartModification">
 		<property name="addons" type="java.util.List&lt;String>"/>
-		</bean>		
+	</bean>		
 	
 </beans>
 
