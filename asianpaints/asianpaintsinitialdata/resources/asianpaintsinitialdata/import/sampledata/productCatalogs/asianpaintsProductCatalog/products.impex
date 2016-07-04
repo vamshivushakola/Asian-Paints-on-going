@@ -14,17 +14,17 @@ $taxGroup=Europe1PriceFactory_PTG(code)[default=eu-vat-full]
 #INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
 INSERT_UPDATE AsianpaintsProduct;code[unique=true];$catalogVersion;unit(code)[default='pieces'];$prices;$supercategories;variantType(code);manufacturerName;$approved;$taxGroup;ean;isComingSoon[default='false']
 ;0001;;pieces;;101;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0002;;pieces;;102;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0003;;pieces;;201;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0004;;pieces;;202;AsianpaintsStyleVariantProduct;asianpaints;;;;
+;0002;;pieces;;102;;asianpaints;;;;
+;0003;;pieces;;201;;asianpaints;;;;
+;0004;;pieces;;202;;asianpaints;;;;
 
 ;0005;;pieces;;101;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0006;;pieces;;202;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0007;;pieces;;201;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0008;;pieces;;102;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0009;;pieces;;202;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0010;;pieces;;101;AsianpaintsStyleVariantProduct;asianpaints;;;;
-;0011;;pieces;;102;AsianpaintsStyleVariantProduct;asianpaints;;;;
+;0006;;pieces;;202;;asianpaints;;;;
+;0007;;pieces;;201;;asianpaints;;;;
+;0008;;pieces;;102;;asianpaints;;;;
+;0009;;pieces;;202;;asianpaints;;;;
+;0010;;pieces;;101;;asianpaints;;;;
+;0011;;pieces;;102;;asianpaints;;;;
 
 ##Coming Soon
 #;0012;;pieces;;101;AsianpaintsStyleVariantProduct;asianpaints;;;;true

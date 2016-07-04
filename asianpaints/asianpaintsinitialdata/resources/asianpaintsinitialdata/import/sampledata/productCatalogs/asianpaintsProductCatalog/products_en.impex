@@ -97,17 +97,17 @@ UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$
 #;G0007_M;;Extend Roller 5L(Green);Smooth & high performance luxury finishes;;;M
 #;G0007_L;;Extend Roller 10L(Green);Smooth & high performance luxury finishes;;;L
 
-;0008;;royalplay_galaxy;when applied on a Royale Wall, creates a subtle sparkly appearance on the wall;It modifies your existing wall with additional coats using Rollers without much effort or special skill required by the applicator.
+;0008;;Royal Play Galaxy;when applied on a Royale Wall, creates a subtle sparkly appearance on the wall;It modifies your existing wall with additional coats using Rollers without much effort or special skill required by the applicator.
 
-#;B0008;;royalplay_galaxy;Smooth & high performance luxury finishes;;Blue
-#;R0008;;royalplay_galaxy;Smooth & high performance luxury finishes;;Red
-#;G0008;;royalplay_galaxy;Smooth & high performance luxury finishes;;Green
-#;B0008_M;;royalplay_galaxy 5L(Blue);Smooth & high performance luxury finishes;;;M
-#;B0008_L;;royalplay_galaxy 10L(Blue);Smooth & high performance luxury finishes;;;L
-#;R0008_M;;royalplay_galaxy 5L(Red);Smooth & high performance luxury finishes;;;M
-#;R0008_L;;royalplay_galaxy 10L(Red);Smooth & high performance luxury finishes;;;L
-#;G0008_M;;royalplay_galaxy 5L(Green);Smooth & high performance luxury finishes;;;M
-#;G0008_L;;royalplay_galaxy 10L(Green);Smooth & high performance luxury finishes;;;L
+#;B0008;;Royal Play Galaxy;Smooth & high performance luxury finishes;;Blue
+#;R0008;;Royal Play Galaxy;Smooth & high performance luxury finishes;;Red
+#;G0008;;Royal Play Galaxy;Smooth & high performance luxury finishes;;Green
+#;B0008_M;;Royal Play Galaxy 5L(Blue);Smooth & high performance luxury finishes;;;M
+#;B0008_L;;Royal Play Galaxy 10L(Blue);Smooth & high performance luxury finishes;;;L
+#;R0008_M;;Royal Play Galaxy 5L(Red);Smooth & high performance luxury finishes;;;M
+#;R0008_L;;Royal Play Galaxy 10L(Red);Smooth & high performance luxury finishes;;;L
+#;G0008_M;;Royal Play Galaxy 5L(Green);Smooth & high performance luxury finishes;;;M
+#;G0008_L;;Royal Play Galaxy 10L(Green);Smooth & high performance luxury finishes;;;L
 
 ;0009;;Soft Brush;This type of brushes are extremely effective in oil base paints, varnishes and polyurethane.;These are flexible brushes that hold paint for making a line and they are specially designed to make more reliable and grip. These are available in black and white hair
 
@@ -133,14 +133,14 @@ UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$
 #;G0010_M;;Premium Emulsion 5L(Green);Smooth & high performance luxury finishes;;;M
 #;G0010_L;;Premium Emulsion 10L(Green);Smooth & high performance luxury finishes;;;L
 
-;0011;;exterior vanish;This Colour Coating  is a long lasting film that keeps your house as good as new for a long time;Exterior Vanishis designed to protect your walls against unwanted fungus that can cause considerable damage.
+;0011;;Exterior vanish;This Colour Coating  is a long lasting film that keeps your house as good as new for a long time;Exterior Vanish designed to protect your walls against unwanted fungus that can cause considerable damage.
 
-#;B0011;;exterior vanish;Smooth & high performance luxury finishes;;Blue
-#;R0011;;exterior vanish;Smooth & high performance luxury finishes;;Red
-#;G0011;;exterior vanish;Smooth & high performance luxury finishes;;Green
-#;B0011_M;;exterior vanish 5L	(Blue);Smooth & high performance luxury finishes;;;M
-#;B0011_L;;exterior vanish 10L(Blue);Smooth & high performance luxury finishes;;;L
-#;R0011_M;;exterior vanish 5L(Red);Smooth & high performance luxury finishes;;;M
-#;R0011_L;;exterior vanish 10L(Red);Smooth & high performance luxury finishes;;;L
-#;G0011_M;;exterior vanish 5L(Green);Smooth & high performance luxury finishes;;;M
-#;G0011_L;;exterior vanish 10L(Green);Smooth & high performance luxury finishes;;;L
+#;B0011;;Exterior vanish;Smooth & high performance luxury finishes;;Blue
+#;R0011;;Exterior vanish;Smooth & high performance luxury finishes;;Red
+#;G0011;;Exterior vanish;Smooth & high performance luxury finishes;;Green
+#;B0011_M;;Exterior vanish 5L	(Blue);Smooth & high performance luxury finishes;;;M
+#;B0011_L;;Exterior vanish 10L(Blue);Smooth & high performance luxury finishes;;;L
+#;R0011_M;;Exterior vanish 5L(Red);Smooth & high performance luxury finishes;;;M
+#;R0011_L;;Exterior vanish 10L(Red);Smooth & high performance luxury finishes;;;L
+#;G0011_M;;Exterior vanish 5L(Green);Smooth & high performance luxury finishes;;;M
+#;G0011_L;;Exterior vanish 10L(Green);Smooth & high performance luxury finishes;;;L

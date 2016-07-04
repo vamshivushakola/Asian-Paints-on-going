@@ -176,9 +176,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_ApparelSizeVariantProduct_size();
 			
-				single_createattr_AsianpaintsProduct_genders();
-			
 				single_createattr_AsianpaintsProduct_isComingSoon();
+			
+				single_createattr_AsianpaintsProduct_isOnSale();
 			
 				single_createattr_Customer_contactNumber();
 			
@@ -280,23 +280,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_AsianpaintsProduct_genders() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"AsianpaintsProduct", 
-					"genders",  
-					null,
-					"GenderList",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
 	public void single_createattr_AsianpaintsProduct_isComingSoon() throws JaloBusinessException
 	{
 		
@@ -308,6 +291,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					null,
 					"java.lang.Boolean",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_AsianpaintsProduct_isOnSale() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"AsianpaintsProduct", 
+					"isOnSale",  
+					null,
+					"java.lang.Boolean",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
 				);
@@ -643,9 +643,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				);
 				}
 			
-			single_setAttributeProperties_AsianpaintsProduct_genders();
-		
 			single_setAttributeProperties_AsianpaintsProduct_isComingSoon();
+		
+			single_setAttributeProperties_AsianpaintsProduct_isOnSale();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -874,28 +874,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_AsianpaintsProduct_genders() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"AsianpaintsProduct", 
-								"genders",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
 						public void single_setAttributeProperties_AsianpaintsProduct_isComingSoon() throws JaloBusinessException
 						{
 							
@@ -906,6 +884,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							setAttributeProperties(
 								"AsianpaintsProduct", 
 								"isComingSoon",
+								false, 
+								Boolean.FALSE,
+								"Boolean.FALSE",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_AsianpaintsProduct_isOnSale() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"AsianpaintsProduct", 
+								"isOnSale",
 								false, 
 								Boolean.FALSE,
 								"Boolean.FALSE",

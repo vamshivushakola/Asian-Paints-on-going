@@ -68,6 +68,9 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ##Coming Soon
 ;;ComingSoonLink;ComingSoonLink;/comingSoonProducts;ComingSoonLink;ComingSoonLink;newWindow;;;
 
+##On Sale
+;;OnSaleLink;OnSaleLink;/onSaleProducts;OnSaleLink;OnSaleLink;;;;
+
 ############# Added
 ;;TermsAndConditionsLink;Terms and Conditions Link;/termsAndConditions;TermsAndConditionsLink;TermsAndConditionsLink;;;;
 ;;StoreFinderLink;Store Finder Link;/store-finder;StoreFinderLink;StoreFinderLink;;;;
@@ -103,6 +106,8 @@ INSERT_UPDATE AccountNavigationComponent;$contentCV[unique=true];uid[unique=true
 #Coming Soon
 ;;ComingSoonNavigationComponent;Coming Soon Navigation Component;ComingSoonLinkNavNode;;ComingSoonNavigationComponent
 
+#On Sale Products
+;;OnSaleNavigationComponent;On Sale Navigation Component;OnSaleLinkNavNode;;OnSaleNavigationComponent
 
 
 ##Contact Number
@@ -162,7 +167,7 @@ INSERT_UPDATE PurchasedCategorySuggestionComponent;$contentCV[unique=true];uid[u
 INSERT_UPDATE CartSuggestionComponent;$contentCV[unique=true];uid[unique=true];name;productReferenceTypes(code);maximumNumberProducts;filterPurchased;&componentRef
 ;;CartSuggestions;Cart Suggestions;ACCESSORIES,SIMILAR;20;true;CartSuggestions
 
-# CMS SearchBox and ComingSoon Components
+# CMS SearchBox Components
 INSERT_UPDATE SearchBoxComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
 ;;SearchBox;Search Box;SearchBox
 
@@ -210,7 +215,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 ;;NavigationBarSlot;NavBarComponent
 ;;TabsSlot;TabPanelContainer
 ;;FooterSlot;FooterComponent
-;;HeaderLinksSlot;ComingSoonLink,ContactInfo
+;;HeaderLinksSlot;ComingSoonLink,OnSaleLink,ContactInfo
 ;;SearchBoxSlot;SearchBox,LangCurrencyComponent
 #;;VariantSelectorSlot;VariantSelector
 ;;AddToCartSlot;AddToCart
@@ -295,6 +300,8 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ###Coming Soon
 ;ComingSoonLinkNavNode;;Coming Soon;ComingSoonLinkNavNode;ComingSoonLink;ComingSoonLinkNavNode
 
+#On Sale
+;OnSaleLinkNavNode;;On Sale;OnSaleLinkNavNode;OnSaleLink;OnSaleLinkNavNode
 
 
 ###Contact Number
@@ -460,7 +467,7 @@ INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&com
 
 ;;ExteriorInteriorBannerComponent;Exterior Interior Small Detail;ExteriorInteriorBannerComponent;/
 
-;;ComingSoonBanner;Coming Soon Banner;ComingSoonBanner;/comingSoonProducts
+#;;ComingSoonBanner;Coming Soon Banner;ComingSoonBanner;/comingSoonProducts
 
 #### Slots 2A 2B 2C
 #;;SeeWhatInspiringOthersComponent;See What Inspiring Others Thumbnail Detail;SeeWhatInspiringOthersComponent;/
@@ -468,7 +475,7 @@ INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&com
 #;;HomeLetSpeakComponent;Home Let Speak Component;HomeLetSpeakComponent;/
 
 INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
-;;AsianpaintsHomepageCarouselComponent;Asianpaints Homepage Carousel;BookOfColorsBanner,WoodTechBanner,HomeSolutionsBanner,ComingSoonBanner;AsianpaintsHomepageCarouselComponent
+;;AsianpaintsHomepageCarouselComponent;Asianpaints Homepage Carousel;BookOfColorsBanner,WoodTechBanner,HomeSolutionsBanner;AsianpaintsHomepageCarouselComponent
 
 
 

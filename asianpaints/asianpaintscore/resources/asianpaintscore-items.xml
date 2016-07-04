@@ -110,18 +110,21 @@
 			          jaloclass="com.asianpaints.core.jalo.AsianpaintsProduct">
 				<description>Base asianpaints product extension that contains additional attributes.</description>
 				<attributes>
-					<attribute qualifier="genders" type="GenderList">
-						<description>List of products that the AsianpaintsProduct is designed for</description>
-						<modifiers/>
-						<persistence type="property"/>
-					</attribute>								
-					
+				
 					<attribute qualifier="isComingSoon" type="java.lang.Boolean">
 						<description>Products which are coming soon.</description>
 						<modifiers optional="false" initial ="false"/>
 						<persistence type="property"/>
 						<defaultvalue>Boolean.FALSE</defaultvalue>
 					</attribute>
+					
+					<attribute qualifier="isOnSale" type="java.lang.Boolean">
+						<description>Products which are on sale.</description>
+						<modifiers/>
+						<persistence type="property"/>
+						<defaultvalue>Boolean.FALSE</defaultvalue>
+					</attribute>
+					
 				</attributes>
 							
 			</itemtype>
@@ -146,7 +149,7 @@
 			<itemtype code="AsianpaintsStyleVariantProduct" extends="VariantProduct"
 			          autocreate="true" generate="true"
 			          jaloclass="com.asianpaints.core.jalo.AsianpaintsStyleVariantProduct">
-				<description>Asianpaints style variant type that contains additional attribute describing variant style.
+				<description>Asian Paints style variant type that contains additional attribute describing variant style.
 				</description>
 				<attributes>
 					<attribute qualifier="style" type="localized:java.lang.String"
@@ -169,7 +172,7 @@
 			<itemtype code="AsianpaintsSizeVariantProduct" extends="AsianpaintsStyleVariantProduct"
 			          autocreate="true" generate="true"
 			          jaloclass="com.asianpaints.core.jalo.AsianpaintsSizeVariantProduct">
-				<description>Asianpaints size variant type that contains additional attribute describing variant size.
+				<description>Asian Paints size variant type that contains additional attribute describing variant size.
 				</description>
 				<attributes>
 					<attribute qualifier="size" type="localized:java.lang.String"
