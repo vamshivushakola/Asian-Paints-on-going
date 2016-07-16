@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jul 4, 2016 11:24:12 PM                     ---
+ * --- Generated at Jul 16, 2016 10:37:02 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.asianpaints.core.constants;
@@ -24,12 +24,15 @@ public class GeneratedAsianpaintsCoreConstants
 		public static final String ASIANPAINTSSTYLEVARIANTPRODUCT = "AsianpaintsStyleVariantProduct".intern();
 		public static final String COMINGSOONCUSTOMER = "ComingSoonCustomer".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String PRICETYPE = "PriceType".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
 	public static class Attributes
 	{
 		public static class AbstractOrderEntry
 		{
+			public static final String ACTUALBASEPRICE = "actualBasePrice".intern();
+			public static final String ACTUALTOTALPRICE = "actualTotalPrice".intern();
 			public static final String SELECTEDADDONS = "selectedAddons".intern();
 		}
 		public static class Customer
@@ -37,9 +40,22 @@ public class GeneratedAsianpaintsCoreConstants
 			public static final String CONTACTNUMBER = "contactNumber".intern();
 			public static final String DATEOFBIRTH = "dateOfBirth".intern();
 		}
+		public static class PriceRow
+		{
+			public static final String PRICETYPE = "priceType".intern();
+		}
+		public static class Product
+		{
+			public static final String ISONSALE = "isOnSale".intern();
+		}
 	}
 	public static class Enumerations
 	{
+		public static class PriceType
+		{
+			public static final String LISTPRICE = "LISTPRICE".intern();
+			public static final String SALEPRICE = "SALEPRICE".intern();
+		}
 		public static class SwatchColorEnum
 		{
 			public static final String BLACK = "BLACK".intern();

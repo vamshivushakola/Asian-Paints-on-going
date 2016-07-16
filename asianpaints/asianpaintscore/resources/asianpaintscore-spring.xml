@@ -483,7 +483,15 @@
 
 
 	<!-- <bean id="exportCustomerJob" class="com.asianpaints.core.customer.export.ExportCustomerJob" parent="abstractJobPerformable"/> -->
-																										
-
+	
+	<alias name="defaultAsianpaintsOnSaleProductDao" alias="asianpaintsOnSaleProductDao"/>	
+	<bean id="defaultAsianpaintsOnSaleProductDao" class="com.asianpaints.core.onsale.dao.impl.DefaultAsianpaintsOnSaleProductDao">
+	</bean>																					
+	
+	<alias name="defaultAsianpaintsOnSaleProductService" alias="asianpaintsOnSaleProductService"/>
+	<bean id="defaultAsianpaintsOnSaleProductService" class="com.asianpaints.core.onsale.service.impl.DefaultAsianpaintsOnSaleProductService">
+		<property name="asianpaintsOnSaleProductDao" ref="defaultAsianpaintsOnSaleProductDao"></property>
+		<property name="modelService" ref="modelService"></property>
+	</bean>
 
 </beans>

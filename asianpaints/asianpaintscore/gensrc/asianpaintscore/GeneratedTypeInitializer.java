@@ -131,6 +131,11 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			null
 		);
 	
+		createEnumerationType(
+			"PriceType",
+			null
+		);
+	
 		createCollectionType(
 			"GenderList",
 			"Gender",
@@ -176,9 +181,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_ApparelSizeVariantProduct_size();
 			
-				single_createattr_AsianpaintsProduct_isComingSoon();
+				single_createattr_Product_isOnSale();
 			
-				single_createattr_AsianpaintsProduct_isOnSale();
+				single_createattr_AsianpaintsProduct_isComingSoon();
 			
 				single_createattr_Customer_contactNumber();
 			
@@ -193,6 +198,12 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				single_createattr_AsianpaintsSizeVariantProduct_addons();
 			
 				single_createattr_AbstractOrderEntry_selectedAddons();
+			
+				single_createattr_AbstractOrderEntry_actualBasePrice();
+			
+				single_createattr_AbstractOrderEntry_actualTotalPrice();
+			
+				single_createattr_PriceRow_priceType();
 			
 				single_createattr_ComingSoonCustomer_firstName();
 			
@@ -280,6 +291,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_Product_isOnSale() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Product", 
+					"isOnSale",  
+					null,
+					"java.lang.Boolean",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
 	public void single_createattr_AsianpaintsProduct_isComingSoon() throws JaloBusinessException
 	{
 		
@@ -291,23 +319,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					null,
 					"java.lang.Boolean",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
-	public void single_createattr_AsianpaintsProduct_isOnSale() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"AsianpaintsProduct", 
-					"isOnSale",  
-					null,
-					"java.lang.Boolean",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
 				);
@@ -426,6 +437,57 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"selectedAddons",  
 					null,
 					"AbstractOrderCollectionList",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_AbstractOrderEntry_actualBasePrice() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"AbstractOrderEntry", 
+					"actualBasePrice",  
+					null,
+					"java.lang.Double",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_AbstractOrderEntry_actualTotalPrice() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"AbstractOrderEntry", 
+					"actualTotalPrice",  
+					null,
+					"java.lang.Double",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_PriceRow_priceType() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"PriceRow", 
+					"priceType",  
+					null,
+					"PriceType",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -583,6 +645,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			} )
 		);
 	
+		createEnumerationValues(
+			"PriceType",
+			true,
+			Arrays.asList( new String[] {
+			
+				"LISTPRICE",
+				"SALEPRICE"
+			} )
+		);
+	
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -633,6 +705,18 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				{
 				Map customPropsMap = new HashMap();
 				
+				changeMetaType(
+					"Product",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_Product_isOnSale();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
 				setItemTypeProperties(
 					"AsianpaintsProduct",
 					false,
@@ -644,8 +728,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				}
 			
 			single_setAttributeProperties_AsianpaintsProduct_isComingSoon();
-		
-			single_setAttributeProperties_AsianpaintsProduct_isOnSale();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -706,6 +788,22 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				}
 			
 			single_setAttributeProperties_AbstractOrderEntry_selectedAddons();
+		
+			single_setAttributeProperties_AbstractOrderEntry_actualBasePrice();
+		
+			single_setAttributeProperties_AbstractOrderEntry_actualTotalPrice();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				changeMetaType(
+					"PriceRow",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_PriceRow_priceType();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -777,6 +875,13 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				setDefaultProperties(
 					"SwatchColorEnum",
+					true,
+					true,
+					null
+				);
+			
+				setDefaultProperties(
+					"PriceType",
 					true,
 					true,
 					null
@@ -874,7 +979,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_AsianpaintsProduct_isComingSoon() throws JaloBusinessException
+						public void single_setAttributeProperties_Product_isOnSale() throws JaloBusinessException
 						{
 							
 							
@@ -882,8 +987,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"AsianpaintsProduct", 
-								"isComingSoon",
+								"Product", 
+								"isOnSale",
 								false, 
 								Boolean.FALSE,
 								"Boolean.FALSE",
@@ -896,7 +1001,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_AsianpaintsProduct_isOnSale() throws JaloBusinessException
+						public void single_setAttributeProperties_AsianpaintsProduct_isComingSoon() throws JaloBusinessException
 						{
 							
 							
@@ -905,7 +1010,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							
 							setAttributeProperties(
 								"AsianpaintsProduct", 
-								"isOnSale",
+								"isComingSoon",
 								false, 
 								Boolean.FALSE,
 								"Boolean.FALSE",
@@ -1060,6 +1165,72 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							setAttributeProperties(
 								"AbstractOrderEntry", 
 								"selectedAddons",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_AbstractOrderEntry_actualBasePrice() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"AbstractOrderEntry", 
+								"actualBasePrice",
+								false, 
+								Double.valueOf(0.0D),
+								"Double.valueOf(0.0D)",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_AbstractOrderEntry_actualTotalPrice() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"AbstractOrderEntry", 
+								"actualTotalPrice",
+								false, 
+								Double.valueOf(0.0D),
+								"Double.valueOf(0.0D)",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_PriceRow_priceType() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"PriceRow", 
+								"priceType",
 								false, 
 								null,
 								null,

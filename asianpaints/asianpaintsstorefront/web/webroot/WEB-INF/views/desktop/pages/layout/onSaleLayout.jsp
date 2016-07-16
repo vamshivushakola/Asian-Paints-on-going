@@ -13,121 +13,38 @@
 	<div id="globalMessages">
 		<common:globalMessages />
 	</div>
-	<div id=productNotifyDiv>
-		<div>
-			<input type="text" id="messageNotifyId" readonly="readonly" style="display: none; border: none; font-weight: bold; width: 350px"/>
-		</div>
+	<div id=productOnSaleDiv>
 		<ol class="products-list" data-isOrderForm="false">
-
-			<c:forEach items="${comingSoonProductData}" var="product">
+			<span class="red-sticker">
+					50%
+				<p>off</p>
+				</span>
+				<c:forEach items="${onSaleProductData}" var="product">
 				<div class="head"><b>${product.name}</b></div>
 <!--For getting product images on coming soon page  -->
-			<td style="padding-right: 20px;"><img src="${product.thumbnail.url}" alt="${product.thumbnail.altText}" title="${product.thumbnail.altText}"/></td>
-				
+			<td style="padding-right: 20px;">
+			<a href="p/${product.code}"><img src="${product.thumbnail.url}" alt="${product.thumbnail.altText}" title="${product.thumbnail.altText}"/></a></td>
 				<td>${product.summary}</td>
-				
-				<input type="submit" id="notifyMe_${product.code}" value="Notify Me" onclick='openForm("${product.code}")' />
-				
-				<div id="notifyId_${product.code}" style="display: none">
-					<form  id="myForm" name="saveCustomerDataForm_${product.code}">
-					<p>Please provide all the details</p>
-						<table>
-							<tr>
-								<td>First name:<br></td>
-								<td><input type="text" name="firstName" id="firstName" required="required"><br></td>
-							</tr>
-							<tr>
-								<td>Last name:<br></td>
-								<td><input type="text" name="lastName" id="lastName" required="required"><br></td>
-							</tr>
-							<tr>
-								<td>Email Id :<br></td>
-								<td><input type="text" name="emailId" id="emailId" required="required"><br></td>
-							</tr>
-							<tr>
-								<td>Product Code:<br></td>
-								<td><input type="text" name="productCode" id="productCode" value="${product.code}" readonly="readonly"><br></td>
-							</tr>
-							<tr>
-								<td>Product Name :<br></td>
-								<td><input type="text" name="productName" id="productName" value="${product.name}" readonly="readonly"><br></td>
-							</tr>
-							<tr>
-							<tr>
-								<td></td>
-								<td><input type="button" value="Save" onclick='formsubmit("${product.code}")' style="color: white; background-color: green"> 
-									<input type="reset" value="Cancel" onclick='cancelForm("${product.code}")' style="color: white; background-color: green"></td>
-							</tr>
-						</table>
-					</form>
-				</div>
 			</c:forEach>
+			<!-- <span class="red-sticker">
+					38%
+				<p>off</p>
+				</span> -->
 		</ol>
 		
 	</div>
 	
-	 
-	<script type="text/javascript" >
-	function formsubmit(code) {
-				 var str = $("#myForm").serialize();
-				 try{
-				 $.ajax({
-						type : "POST",
-						data : str,
-						url : "<c:url value='/saveNotifyMeProducts'/>",
-						success : function(result) {
-							 
-							$("#messageNotifyId").val(result);
-							$("#messageNotifyId").css({
-								'display' : "block"
-							}); 	 
-							if(result.search("saved") != -1){
-								$("#messageNotifyId").css({
-									'color' : "green"
-									
-								}); 
-							}
-							else{
-								$("#messageNotifyId").css({
-									'color' : "red"
-								});
-								}
-																			
-						},
-						error : function() {
-							 
-						},
-						done : function() {
-							 
-						}
-					});
-				 }
-				 catch(e){
-					 alert(e);
-				 }
-		}
-	</script>
-		<script type="text/javascript">
-		function openForm(code) {
-		 
-			$("#notifyId_"+code).css({
-				'display' : "block"
+	 <script type="text/javascript" >
+	 function goToPdp(code) {
+		 $.ajax({
+				type : "GET",
+				data : str,
+				url : "<c:url value='/**/p/{productCode:.*}'/>",
 			});
-			$("#notifyMe_"+code).css({
-				'display' : "none"
-			});
-		}
+}
+</script>
+
 		
-		function cancelForm(code) {
-			$("#notifyId_"+code).css({
-				'display' : "none"
-			});
-			$("#notifyMe_"+code).css({
-				'display' : "block"
-			});
-		}
-	</script>
-	
 </template:page>
 
 

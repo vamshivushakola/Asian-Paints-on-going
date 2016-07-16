@@ -12,6 +12,8 @@
 			type="java.util.List&lt;com.asianpaints.facades.product.data.GenderData>" />
 		<property name="isComingSoon" type="Boolean" />
 		<property name="addons" type="java.util.List&lt;String>" />
+		<property name="actualPrice" type="de.hybris.platform.commercefacades.product.data.PriceData"/>
+		<property name="salePrice" type="de.hybris.platform.commercefacades.product.data.PriceData"/>
 	</bean>
 
 	<bean class="com.asianpaints.facades.product.data.GenderData">
@@ -46,7 +48,10 @@
 	</bean>
 	
 	<bean class="de.hybris.platform.commercefacades.order.data.OrderEntryData">
-		<property name="addonsOrderEntry" type="java.util.List&lt;String>"/></bean>
+		<property name="addonsOrderEntry" type="java.util.List&lt;String>"/>
+		<property name="actualBasePrice" type="de.hybris.platform.commercefacades.product.data.PriceData"/>
+		<property name="actualTotalPrice" type="de.hybris.platform.commercefacades.product.data.PriceData"/>
+	</bean>
 		
 		
 	<bean class="de.hybris.platform.commerceservices.order.CommerceCartModification">

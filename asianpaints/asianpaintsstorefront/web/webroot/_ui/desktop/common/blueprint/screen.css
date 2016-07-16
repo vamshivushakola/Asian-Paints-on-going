@@ -14,6 +14,30 @@
 /* reset.css */
 html {margin:0;padding:0;border:0;}
 body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;font-family:Lucida Grande,sans-serif;vertical-align:baseline;}
+
+/* .red-sticker {
+    background-color: #a50200;
+    background-image: linear-gradient(to bottom, #cb0400, #a50200);
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    float: left;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    height: 32px;
+    line-height: 12px;
+    padding-top: 5px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 32px;
+}
+* {
+    box-sizing: border-box;
+} */
+
+
 article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
 body {line-height:1.5;background:white;}
 table {border-collapse:separate;border-spacing:0;}

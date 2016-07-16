@@ -40,6 +40,9 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;InteriorPaintingAidCategoryLink;Interior Painting Aid Link; /Asianpaints-Catalogue/InteriorPaintingAid/c/201; InteriorPaintingAidCategoryLink; InteriorPaintingAidCategoryLink;;201
 ;;ExteriorPaintingAidCategoryLink;Exterior Painting Aid Link; /Asianpaints-Catalogue/ExteriorPaintingAid/c/202; ExteriorPaintingAidCategoryLink; ExteriorPaintingAidCategoryLink;;202
 
+;;SaleCategoryLink;Sale Link;/Asianpaints-Catalogue/Sale/c/100;SaleCategoryLink;SaleCategoryLink;;100
+
+
 ;;AboutAcceleratorLink;About Accelerator Link;"http://www.hybris.com/multichannel-accelerator";AboutAcceleratorLink;AboutAcceleratorLink;newWindow;;;
 
 ;;AboutHybrisLink;About Hybris Link;"https://www.asianpaints.com/company-info/about-us/history.aspx ";AboutHybrisLink;AboutHybrisLink;newWindow;;;
@@ -95,6 +98,8 @@ INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];na
 ;;PaintsBarComponent;Paints Bar Component;10;PaintsCategoryLink;;PaintsBarComponent
 ;;PaintingAidBarComponent;Painting Aid Bar Component;10;PaintingAidCategoryLink;;PaintingAidBarComponent
 
+;;SaleBarComponent;Sale Bar Component;10;SaleCategoryLink;;SaleBarComponent
+
 # Account Navigation Bar Component
 INSERT_UPDATE AccountNavigationComponent;$contentCV[unique=true];uid[unique=true];name;navigationNode(&nodeRef);styleClass;&componentRef
 ;;AccountLeftNavigationComponent;Account Left Navigation Component;AccountLeftNavNode;;AccountLeftNavigationComponent
@@ -121,7 +126,7 @@ INSERT_UPDATE AccountNavigationCollectionComponent;$contentCV[unique=true];uid[u
 
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
-;;NavBarComponent;Navigation Bar Collection Component;PaintsBarComponent,PaintingAidBarComponent;NavBarComponent
+;;NavBarComponent;Navigation Bar Collection Component;PaintsBarComponent,PaintingAidBarComponent,SaleBarComponent;NavBarComponent
 
 # CMS tabs components
 INSERT_UPDATE CMSTabParagraphComponent;$contentCV[unique=true];uid[unique=true];name;visible;&componentRef
@@ -284,6 +289,9 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ;PaintsNavNode;;Paints Links;AsianpaintsNavNode;PaintsCategoryLink;PaintsNavNode
 ;PaintingAidNavNode;;Painting Aid Links;AsianpaintsNavNode;PaintingAidCategoryLink;PaintingAidNavNode
 
+;SaleNavNode;;Sale Links;AsianpaintsNavNode;SaleCategoryLink;SaleNavNode
+
+
 ;PaintsTypesNavNode;;Paints Product Types Links;PaintsNavNode;InteriorPaintsCategoryLink,ExteriorPaintsCategoryLink;PaintsTypesNavNode
 ;PaintingAidTypesNavNode;;Painting Aid Product Types Links;PaintingAidNavNode;InteriorPaintingAidCategoryLink,ExteriorPaintingAidCategoryLink;PaintingAidTypesNavNode
 
@@ -312,6 +320,7 @@ INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];na
 ;;PaintsBarComponent;PaintsNavNode
 ;;PaintingAidBarComponent;PaintingAidNavNode
 
+;;SaleBarComponent;SaleNavNode
 
 
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;navigationNode(&nodeRef);link(uid, $contentCV);styleClass;dropDownLayout(code);&componentRef

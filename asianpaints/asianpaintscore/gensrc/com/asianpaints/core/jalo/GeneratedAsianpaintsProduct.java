@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jul 4, 2016 11:24:12 PM                     ---
+ * --- Generated at Jul 16, 2016 10:37:02 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.asianpaints.core.jalo;
@@ -22,14 +22,11 @@ public abstract class GeneratedAsianpaintsProduct extends Product
 {
 	/** Qualifier of the <code>AsianpaintsProduct.isComingSoon</code> attribute **/
 	public static final String ISCOMINGSOON = "isComingSoon";
-	/** Qualifier of the <code>AsianpaintsProduct.isOnSale</code> attribute **/
-	public static final String ISONSALE = "isOnSale";
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
 		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(Product.DEFAULT_INITIAL_ATTRIBUTES);
 		tmp.put(ISCOMINGSOON, AttributeMode.INITIAL);
-		tmp.put(ISONSALE, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
 	@Override
@@ -109,79 +106,6 @@ public abstract class GeneratedAsianpaintsProduct extends Product
 	public void setIsComingSoon(final boolean value)
 	{
 		setIsComingSoon( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>AsianpaintsProduct.isOnSale</code> attribute.
-	 * @return the isOnSale - Products which are on sale.
-	 */
-	public Boolean isIsOnSale(final SessionContext ctx)
-	{
-		return (Boolean)getProperty( ctx, ISONSALE);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>AsianpaintsProduct.isOnSale</code> attribute.
-	 * @return the isOnSale - Products which are on sale.
-	 */
-	public Boolean isIsOnSale()
-	{
-		return isIsOnSale( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @return the isOnSale - Products which are on sale.
-	 */
-	public boolean isIsOnSaleAsPrimitive(final SessionContext ctx)
-	{
-		Boolean value = isIsOnSale( ctx );
-		return value != null ? value.booleanValue() : false;
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @return the isOnSale - Products which are on sale.
-	 */
-	public boolean isIsOnSaleAsPrimitive()
-	{
-		return isIsOnSaleAsPrimitive( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @param value the isOnSale - Products which are on sale.
-	 */
-	public void setIsOnSale(final SessionContext ctx, final Boolean value)
-	{
-		setProperty(ctx, ISONSALE,value);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @param value the isOnSale - Products which are on sale.
-	 */
-	public void setIsOnSale(final Boolean value)
-	{
-		setIsOnSale( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @param value the isOnSale - Products which are on sale.
-	 */
-	public void setIsOnSale(final SessionContext ctx, final boolean value)
-	{
-		setIsOnSale( ctx,Boolean.valueOf( value ) );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>AsianpaintsProduct.isOnSale</code> attribute. 
-	 * @param value the isOnSale - Products which are on sale.
-	 */
-	public void setIsOnSale(final boolean value)
-	{
-		setIsOnSale( getSession().getSessionContext(), value );
 	}
 	
 }

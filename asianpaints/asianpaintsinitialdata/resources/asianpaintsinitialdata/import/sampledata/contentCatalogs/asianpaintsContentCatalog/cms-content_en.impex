@@ -20,6 +20,8 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$
 ;;HomepageNavLink;"Home"
 ;;PaintsCategoryLink;"Paints"
 ;;PaintingAidCategoryLink;"Painting Aid"
+
+;;SaleCategoryLink;"On Sale"
 ;;InteriorPaintsCategoryLink;"Interior Paints"
 ;;ExteriorPaintsCategoryLink;"Exterior Paints"
 ;;InteriorPaintingAidCategoryLink;"Interior Painting Aid"

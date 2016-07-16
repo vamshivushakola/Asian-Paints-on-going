@@ -15,6 +15,8 @@
 	<extension abstractclassprefix="Generated" classprefix="AsianpaintsStorefront" name="asianpaintsstorefront">
 		
 
+
+<requires-extension name="asianpaintscheckoutaddon"/>
 <requires-extension name="assistedservicestorefront"/>
 <requires-extension name="paypaladdon"/>
 <requires-extension name="liveeditaddon"/>
@@ -28,7 +30,7 @@
 		<requires-extension name="asianpaintsfacades"/>
 
 		<requires-extension name="commerceservices"/>
-
+	
 
 		<webmodule jspcompile="false" webroot="/asianpaintsstorefront"/>
 			

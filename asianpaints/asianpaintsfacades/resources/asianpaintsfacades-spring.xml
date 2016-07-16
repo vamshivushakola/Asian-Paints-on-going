@@ -198,6 +198,12 @@
 	
 	</bean>
 	
+	<alias name="defaultAsianpaintsOnSaleProductFacade" alias="asianpaintsOnSaleProductFacade"/>
+	<bean id="defaultAsianpaintsOnSaleProductFacade" class="com.asianpaints.core.onsale.facade.impl.DefaultAsianpaintsOnSaleProductFacade">
+		<property name="asianpaintsOnSaleProductService" ref="defaultAsianpaintsOnSaleProductService"></property>
+	</bean>
+	
+	
 	<!-- Added For Contact Number 12/4/16  -->
 	<alias name="defaultAsianpaintsCustomerFacade" alias="defaultAsianpaintsCustomerFacade" />
 	<bean id="defaultAsianpaintsCustomerFacade" class="com.asianpaints.core.customer.facade.impl.DefaultAsianpaintsCustomerFacade" parent="defaultCustomerFacade" />
@@ -225,5 +231,11 @@
 	<bean id="asianpaintsOrderEntryPopulator" class="com.asianpaints.facades.populators.AsianpaintsOrderEntryPopulator" parent="defaultOrderEntryPopulator">	
 	</bean>
 
+	<alias name="asianpaintsProductPricePopulator" alias="productPricePopulator"/>
+	<bean id="asianpaintsProductPricePopulator" parent="baseProductPopulator"
+		  class="com.asianpaints.facades.populators.AsianpaintsProductPricePopulator">
+		<property name="priceDataFactory" ref="priceDataFactory"/>
+		<property name="commercePriceService" ref="commercePriceService"/>
+	</bean>
 	
 </beans>

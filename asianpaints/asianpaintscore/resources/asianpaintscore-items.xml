@@ -38,6 +38,11 @@
 			<value code="WHITE"/>
 			<value code="YELLOW"/>
 		</enumtype>
+		
+		<enumtype code="PriceType" generate="true" autocreate="true" dynamic="true">
+			<value code="LISTPRICE" />
+			<value code="SALEPRICE" />
+		</enumtype>
 	</enumtypes>
 
 	<itemtypes>
@@ -105,6 +110,17 @@
 	<typegroup name="Asianpaints">
 	
 	<!--For Coming Soon  -->
+	
+	<itemtype code="Product" autocreate="false" generate="false">
+		<attributes>
+			<attribute qualifier="isOnSale" type="java.lang.Boolean">
+						<description>Products which are on sale.</description>
+						<modifiers/>
+						<persistence type="property"/>
+						<defaultvalue>Boolean.FALSE</defaultvalue>
+					</attribute>
+		</attributes>
+	</itemtype>
         <itemtype code="AsianpaintsProduct" extends="Product"
 			          autocreate="true" generate="true"
 			          jaloclass="com.asianpaints.core.jalo.AsianpaintsProduct">
@@ -118,12 +134,12 @@
 						<defaultvalue>Boolean.FALSE</defaultvalue>
 					</attribute>
 					
-					<attribute qualifier="isOnSale" type="java.lang.Boolean">
+					<!-- <attribute qualifier="isOnSale" type="java.lang.Boolean">
 						<description>Products which are on sale.</description>
 						<modifiers/>
 						<persistence type="property"/>
 						<defaultvalue>Boolean.FALSE</defaultvalue>
-					</attribute>
+					</attribute> -->
 					
 				</attributes>
 							
@@ -191,17 +207,41 @@
 				</attributes>
 			</itemtype>
 			
-<!-- Popup Cart Addons -->        
+<!-- Popup Cart Addons and on Sale-->        
         <itemtype code="AbstractOrderEntry" extends="GenericItem" abstract="true" autocreate="false" generate="false">
             <attributes>
                 <attribute qualifier="selectedAddons" type="AbstractOrderCollectionList">
                     <modifiers read="true" write="true" search="true" removable="true"/>
                     <persistence type="property"/>
                 </attribute>
+                
+                <attribute type="java.lang.Double" qualifier="actualBasePrice">
+					<persistence type="property" />
+					<modifiers optional="true" />
+					<defaultvalue>Double.valueOf(0.0D)</defaultvalue>
+				</attribute>
+					
+				<attribute type="java.lang.Double" qualifier="actualTotalPrice">
+					<persistence type="property" />
+					<modifiers optional="true" />
+				   	<defaultvalue>Double.valueOf(0.0D)</defaultvalue>
+			    </attribute>
+                
             </attributes>
+            
         </itemtype>
         
-		</typegroup>
+       		<itemtype code="PriceRow" autocreate="false" generate="false">
+				<description>Extending the PriceRow type from core with additional attributes.</description>
+				<attributes>
+					<attribute type="PriceType" qualifier="priceType">
+						<persistence type="property" />
+					</attribute>
+				</attributes>
+			</itemtype>
+       
+       
+	</typegroup>
 		<!--End Of variants  -->
 		
 		
