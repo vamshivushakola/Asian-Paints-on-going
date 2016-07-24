@@ -183,6 +183,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Product_isOnSale();
 			
+				single_createattr_Product_salePercetage();
+			
 				single_createattr_AsianpaintsProduct_isComingSoon();
 			
 				single_createattr_Customer_contactNumber();
@@ -301,6 +303,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"isOnSale",  
 					null,
 					"java.lang.Boolean",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Product_salePercetage() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Product", 
+					"salePercetage",  
+					null,
+					"java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -714,6 +733,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 			single_setAttributeProperties_Product_isOnSale();
 		
+			single_setAttributeProperties_Product_salePercetage();
+		
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -992,6 +1013,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								false, 
 								Boolean.FALSE,
 								"Boolean.FALSE",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Product_salePercetage() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Product", 
+								"salePercetage",
+								false, 
+								null,
+								null,
 								null,
 								true,
 								true,

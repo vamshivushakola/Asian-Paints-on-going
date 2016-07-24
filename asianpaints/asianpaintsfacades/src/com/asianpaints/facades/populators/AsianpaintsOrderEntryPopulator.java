@@ -92,8 +92,11 @@ public class AsianpaintsOrderEntryPopulator extends OrderEntryPopulator
 			{
 				for (final PriceRowModel priceRow : productPriceRows)
 				{
-					salePrice = createPrice(orderEntry, BigDecimal.valueOf(priceRow.getPrice().doubleValue()));
-					entry.setBasePrice(salePrice);
+					if (priceRow.getPriceType() != null && priceRow.getPriceType().equals(PriceType.LISTPRICE))
+					{
+						salePrice = createPrice(orderEntry, BigDecimal.valueOf(priceRow.getPrice().doubleValue()));
+						entry.setBasePrice(salePrice);
+					}
 				}
 			}
 		}

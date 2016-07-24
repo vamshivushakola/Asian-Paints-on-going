@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jul 16, 2016 10:37:02 PM                    ---
+ * --- Generated at Jul 17, 2016 12:21:38 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.asianpaints.core.jalo;
@@ -49,6 +49,7 @@ public abstract class GeneratedAsianpaintsCoreManager extends Extension
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
 		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
 		tmp.put("isOnSale", AttributeMode.INITIAL);
+		tmp.put("salePercetage", AttributeMode.INITIAL);
 		ttmp.put("de.hybris.platform.jalo.product.Product", Collections.unmodifiableMap(tmp));
 		tmp = new HashMap<String, AttributeMode>();
 		tmp.put("contactNumber", AttributeMode.INITIAL);
@@ -615,6 +616,42 @@ public abstract class GeneratedAsianpaintsCoreManager extends Extension
 	public void setPriceType(final PriceRow item, final EnumerationValue value)
 	{
 		setPriceType( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.salePercetage</code> attribute.
+	 * @return the salePercetage - Percentage tag displays on product
+	 */
+	public String getSalePercetage(final SessionContext ctx, final Product item)
+	{
+		return (String)item.getProperty( ctx, AsianpaintsCoreConstants.Attributes.Product.SALEPERCETAGE);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.salePercetage</code> attribute.
+	 * @return the salePercetage - Percentage tag displays on product
+	 */
+	public String getSalePercetage(final Product item)
+	{
+		return getSalePercetage( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.salePercetage</code> attribute. 
+	 * @param value the salePercetage - Percentage tag displays on product
+	 */
+	public void setSalePercetage(final SessionContext ctx, final Product item, final String value)
+	{
+		item.setProperty(ctx, AsianpaintsCoreConstants.Attributes.Product.SALEPERCETAGE,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.salePercetage</code> attribute. 
+	 * @param value the salePercetage - Percentage tag displays on product
+	 */
+	public void setSalePercetage(final Product item, final String value)
+	{
+		setSalePercetage( getSession().getSessionContext(), item, value );
 	}
 	
 	/**

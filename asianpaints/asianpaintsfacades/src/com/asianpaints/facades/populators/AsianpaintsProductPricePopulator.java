@@ -114,9 +114,12 @@ public class AsianpaintsProductPricePopulator<SOURCE extends ProductModel, TARGE
 			{
 				for (final PriceRowModel priceRow : productPriceRows)
 				{
-					priceData = getPriceDataFactory().create(priceType, BigDecimal.valueOf(priceRow.getPrice().doubleValue()),
-							priceRow.getCurrency().getIsocode());
-					productData.setPrice(priceData);
+					if (priceRow.getPriceType() != null && priceRow.getPriceType().equals(PriceType.LISTPRICE))
+					{
+						priceData = getPriceDataFactory().create(priceType, BigDecimal.valueOf(priceRow.getPrice().doubleValue()),
+								priceRow.getCurrency().getIsocode());
+						productData.setPrice(priceData);
+					}
 				}
 			}
 		}

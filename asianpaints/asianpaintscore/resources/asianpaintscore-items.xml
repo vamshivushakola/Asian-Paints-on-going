@@ -114,11 +114,17 @@
 	<itemtype code="Product" autocreate="false" generate="false">
 		<attributes>
 			<attribute qualifier="isOnSale" type="java.lang.Boolean">
-						<description>Products which are on sale.</description>
-						<modifiers/>
-						<persistence type="property"/>
-						<defaultvalue>Boolean.FALSE</defaultvalue>
-					</attribute>
+				<description>Products which are on sale.</description>
+				<modifiers/>
+				<persistence type="property"/>
+				<defaultvalue>Boolean.FALSE</defaultvalue>
+			</attribute>
+			
+			<attribute qualifier="salePercetage" type="java.lang.String" >
+				<description>Percentage tag displays on product</description>
+				<modifiers/>
+				<persistence type="property"/>
+			</attribute>
 		</attributes>
 	</itemtype>
         <itemtype code="AsianpaintsProduct" extends="Product"

@@ -23,11 +23,16 @@
 			</c:when>
 			<c:otherwise>
 				<p class="big-price right">
+					<span class="actualPrice">
+					<format:fromPrice priceData="${product.actualPrice}"/></span>
+					&nbsp;
+					<span class="price"> 
 					<format:fromPrice priceData="${product.price}"/>
+					</span>
 				</p>
 			</c:otherwise>
 		</c:choose>
-	</c:when>
+	</c:when> 	 	
 	<c:otherwise>
 		<table class="volume-prices" cellpadding="0" cellspacing="0" border="0">
 			<thead>

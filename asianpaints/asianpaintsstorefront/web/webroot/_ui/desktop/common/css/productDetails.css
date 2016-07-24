@@ -121,10 +121,15 @@
 
 .productDescription .big-price{
 	font-size:1.417em;
-	color:#303030;
+	color:#004000;
 	padding:0 0 10px 10px;
 }
 
+span.actualPrice {
+    color: #adadad;
+    margin-right: 18px;
+    text-decoration: line-through;
+}
 
 .productDescription .summary{
 	color:#666666;

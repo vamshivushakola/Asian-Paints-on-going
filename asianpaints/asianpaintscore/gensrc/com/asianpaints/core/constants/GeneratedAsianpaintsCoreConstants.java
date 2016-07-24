@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jul 16, 2016 10:37:02 PM                    ---
+ * --- Generated at Jul 17, 2016 12:21:38 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.asianpaints.core.constants;
@@ -47,6 +47,7 @@ public class GeneratedAsianpaintsCoreConstants
 		public static class Product
 		{
 			public static final String ISONSALE = "isOnSale".intern();
+			public static final String SALEPERCETAGE = "salePercetage".intern();
 		}
 	}
 	public static class Enumerations
